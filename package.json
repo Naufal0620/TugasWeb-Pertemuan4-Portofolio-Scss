@@ -1,0 +1,25 @@
+{
+  "name": "porto-scss",
+  "version": "1.0.0",
+  "description": "Portofolio pribadi yang dikonversi ke SCSS dengan arsitektur 7-1 pattern (Tugas Rutin 4).",
+  "private": true,
+  "scripts": {
+    "build:css": "sass src/scss/main.scss:style.css --style=compressed",
+    "build:css:dev": "sass src/scss/main.scss:style.css",
+    "watch:css": "sass --watch src/scss/main.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naufal0620/TugasWeb-Pertemuan2-Portofolio-Scss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naufal0620/TugasWeb-Pertemuan2-Portofolio-Scss/issues"
+  },
+  "homepage": "https://github.com/Naufal0620/TugasWeb-Pertemuan2-Portofolio-Scss#readme",
+  "devDependencies": {
+    "sass": "^1.104.0"
+  }
+}

@@ -1,0 +1,46 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// ============================================================
+// ABSTRACTS / FUNCTIONS
+// Fungsi helper yang dapat dipanggil di seluruh partial.
+// ============================================================
+
+// ------------------------------------------------------------
+// function: space
+// Mengambil nilai spacing dari map $spacings berdasarkan nama.
+// ------------------------------------------------------------
+@function space($key) {
+    @if not map.has-key($spacings, $key) {
+        @error "Spacing '#{$key}' tidak ditemukan di map $spacings.";
+    }
+
+    @return map.get($spacings, $key);
+}
+
+// ------------------------------------------------------------
+// function: color
+// Mengambil warna dari map $colors (theme + nama warna).
+// ------------------------------------------------------------
+@function color($name, $theme: light) {
+    $theme-colors: map.get($colors, $theme);
+
+    @if not map.has-key($theme-colors, $name) {
+        @error "Warna '#{$name}' tidak ditemukan di theme '#{$theme}'.";
+    }
+
+    @return map.get($theme-colors, $name);
+}
+
+// ------------------------------------------------------------
+// function: theme-colors
+// Membantu mengekstrak seluruh pasangan key-value seeduah tema
+// agar mudah dipakai pada @each loop (lihat themes/_dark.scss).
+// ------------------------------------------------------------
+@function theme-colors($theme) {
+    @if not map.has-key($colors, $theme) {
+        @error "Theme '#{$theme}' tidak ditemukan di map $colors.";
+    }
+
+    @return map.get($colors, $theme);
+}

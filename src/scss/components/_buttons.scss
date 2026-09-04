@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+// ============================================================
+// COMPONENTS / BUTTONS
+// Gaya semua tombol (button) yang dipakai di halaman.
+// ============================================================
+
+button[type='submit'] {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-weight: $font-weight-bold;
+    margin-top: 0.5rem;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}

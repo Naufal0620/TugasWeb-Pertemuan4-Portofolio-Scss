@@ -1,0 +1,10 @@
+// ============================================================
+// BASE / RESET
+// Aturan reset dasar agar rendering konsisten lintas browser.
+// ============================================================
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

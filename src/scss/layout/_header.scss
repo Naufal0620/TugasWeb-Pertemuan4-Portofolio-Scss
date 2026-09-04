@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+// ============================================================
+// LAYOUT / HEADER
+// Gaya header (identitas) dan navigasi utama.
+// ============================================================
+
+header {
+    background-color: var(--bg-secondary);
+    padding: space('lg');
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+nav {
+    ul {
+        @include flex-center(row, space('lg'));
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: 1rem 0 0 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: $font-weight-bold;
+        @include transition(opacity);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

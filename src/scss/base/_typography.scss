@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+// ============================================================
+// BASE / TYPOGRAPHY
+// Dasar tipografi global: font family, line height, warna teks.
+// ============================================================
+
+body {
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+}

@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+// ============================================================
+// LAYOUT / GRID
+// Tata letak grid utama halaman (responsive desktop & mobile).
+// ============================================================
+
+// Desktop: grid dua kolom dengan named areas.
+@include responsive('md') {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            'tentang hobi'
+            'proyek hobi'
+            'kontak hobi';
+        gap: space('md');
+        max-width: $max-content-width;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    #tentang {
+        @include grid-area('tentang');
+    }
+
+    #proyek {
+        @include grid-area('proyek');
+    }
+
+    #kontak {
+        @include grid-area('kontak');
+    }
+
+    #hobi {
+        @include grid-area('hobi');
+        @include surface(space('lg'), $border-radius);
+    }
+}
+
+// Mobile: satu kolom penuh.
+@include responsive('sm', max) {
+    main {
+        padding: 1rem;
+        display: grid;
+        gap: space('xl');
+    }
+
+    #hobi {
+        @include surface(space('md'), $border-radius);
+    }
+}

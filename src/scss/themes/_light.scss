@@ -1,0 +1,15 @@
+// ============================================================
+// THEMES / LIGHT
+// Tema terang (default). Mendefinisikan CSS custom properties
+// di :root dari map $colors lewat @each loop.
+// ============================================================
+
+@use 'sass:map';
+@use '../abstracts/functions' as *;
+
+:root {
+    // @each loop: generate --nama-warna untuk seluruh token tema terang.
+    @each $name, $value in theme-colors('light') {
+        --#{$name}: #{$value};
+    }
+}

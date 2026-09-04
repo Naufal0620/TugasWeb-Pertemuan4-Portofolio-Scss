@@ -1,0 +1,17 @@
+// ============================================================
+// THEMES / DARK
+// Tema gelap (otomatis mengikuti preferensi sistem).
+// @each loop kembali dipakai untuk menimpa custom properties
+// berdasarkan map $colors -> 'dark'.
+// ============================================================
+
+@use 'sass:map';
+@use '../abstracts/functions' as *;
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @each $name, $value in theme-colors('dark') {
+            --#{$name}: #{$value};
+        }
+    }
+}

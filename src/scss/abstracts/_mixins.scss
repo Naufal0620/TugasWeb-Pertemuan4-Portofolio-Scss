@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// ============================================================
+// ABSTRACTS / MIXINS
+// Kumpulan mixin reusable yang dipakai di seluruh partial.
+// ============================================================
+
+// ------------------------------------------------------------
+// mixin 1: flex-center
+// Mengatur elemen menjadi flexbox dengan sumbu tertentu.
+// ------------------------------------------------------------
+@mixin flex-center($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+// ------------------------------------------------------------
+// mixin 2: responsive
+// Membungkus rule di dalam media query berdasarkan breakpoint.
+// Mendukung min-width (mobile-first) dan max-width.
+// ------------------------------------------------------------
+@mixin responsive($breakpoint, $type: min) {
+    @if map.has-key($breakpoints, $breakpoint) {
+        $width: map.get($breakpoints, $breakpoint);
+
+        @if $type == min {
+            @media (min-width: $width) {
+                @content;
+            }
+        } @else {
+            @media (max-width: $width) {
+                @content;
+            }
+        }
+    } @else {
+        @error "Breakpoint '#{$breakpoint}' tidak ditemukan di map $breakpoints.";
+    }
+}
+
+// ------------------------------------------------------------
+// mixin 3: transition
+// Menyingkat penulisan properti transition.
+// ------------------------------------------------------------
+@mixin transition($properties: all, $duration: $transition-duration, $easing: $transition-easing) {
+    transition: $properties $duration $easing;
+}
+
+// ------------------------------------------------------------
+// mixin 4: grid-area
+// Menetapkan nama area untuk CSS Grid.
+// ------------------------------------------------------------
+@mixin grid-area($area) {
+    grid-area: $area;
+}
+
+// ------------------------------------------------------------
+// mixin 5: surface
+// Kombinasi background + padding + border-radius agar konsisten.
+// ------------------------------------------------------------
+@mixin surface($padding: null, $radius: null) {
+    background-color: var(--bg-secondary);
+
+    @if $padding != null {
+        padding: $padding;
+    }
+
+    @if $radius != null {
+        border-radius: $radius;
+    }
+}
