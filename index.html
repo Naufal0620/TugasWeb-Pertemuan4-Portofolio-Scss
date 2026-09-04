@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Portofolio Pribadi | Said Muhammad Naufal</title>
+    <meta name="description" content="Landing page portofolio pribadi Said Muhammad Naufal, mahasiswa Ilmu Komputer Universitas Negeri Medan (UNIMED).">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portofolio Pribadi | Said Muhammad Naufal">
+    <meta property="og:description" content="Menampilkan proyek pengembangan web, machine learning, dan riset dari Said Muhammad Naufal.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="beranda">
+        <center>
+            <h1>Said Muhammad Naufal</h1>
+            <p>Mahasiswa Ilmu Komputer | Web Developer & Tech Enthusiast</p>
+        </center>
+        <br>
+        
+        <nav>
+            <ul>
+                <!-- Link baru untuk Tugas 3 ditambahkan di sini -->
+                <li><a href="katalog.html" style="font-weight: bold; background-color: #e0e7ff; padding: 5px 10px; border-radius: 5px;">Katalog Produk (Tugas 3)</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#proyek">Proyek Portofolio</a></li>
+                <li><a href="#hobi">Hobi & Minat</a></li>
+                <li><a href="#kontak">Hubungi Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <article id="tentang">
+            <center><h2>Tentang Saya</h2></center>
+            <p>Halo! Saya adalah mahasiswa program studi Ilmu Komputer angkatan 2025 di Universitas Negeri Medan. Selain mengemban amanah sebagai komting, saya memiliki minat mendalam pada pengembangan aplikasi web, implementasi <i>machine learning</i> terapan, dan struktur data.</p>
+            
+            <figure>
+                <center>
+                    <!-- Pastikan nama file gambarmu benar: foto-profil-said.jpeg -->
+                    <img src="foto-profil-said.jpeg" alt="Foto Profil Said Muhammad Naufal Ganteng" width="300">
+                    <figcaption>Said Muhammad Naufal | Mahasiswa Ilkom UNIMED</figcaption>
+                </center>
+            </figure>
+        </article>
+
+        <hr>
+
+        <section id="proyek">
+            <center><h2>Proyek Portofolio</h2></center>
+            
+            <h3>Pengembangan Aplikasi Web</h3>
+            <ul>
+                <li>
+                    <a href="https://ibkindonesia.ac.id/" target="_blank"><strong>SIAKAD IBK Indonesia</strong></a> — Sistem Informasi Akademik (SIAKAD) untuk mengelola data dan kegiatan administrasi akademik secara terpusat dan online, dibangun menggunakan Laravel 12.
+                </li>
+                <li>
+                    <a href="https://github.com/Naufal0620/kantongku" target="_blank"><strong>KantongKu</strong></a> — Aplikasi manajemen keuangan berbasis web yang dirancang khusus untuk mahasiswa dan anak kos yang dibuat menggunakan CodeIgniter 3.
+                </li>
+                <li>
+                    <a href="https://github.com/Naufal0620/ayolapor" target="_blank"><strong>Ngelapor (AyoLapor)</strong></a> — Platform pelaporan jalan umum rusak yang dibangun menggunakan CodeIgniter 3. 
+                    Mulai dikerjakan pada: <time datetime="2025-11-01">November 2025</time>.
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <aside id="hobi">
+            <center><h2>Hobi & Minat Lainnya</h2></center>
+            <p>Di luar jam kuliah, saya suka menonton seri <i>anime</i> dengan narasi kompleks ataupun yang bergenre <i>romance</i>, bermain <i>Minecraft multiplayer</i> bersama teman saya, dan membuat script atau sistem untuk mempermudah tugas dan pekerjaan saya.</p>
+        </aside>
+
+        <hr>
+
+        <section id="kontak">
+            <center><h2>Hubungi Saya</h2></center>
+            <p>Tertarik untuk berkolaborasi dalam proyek atau diskusi riset? Silakan isi formulir di bawah ini.</p>
+            
+            <form action="#" method="get">
+                <p>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+                </p>
+                <p>
+                    <label for="email">Alamat Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                </p>
+                <p>
+                    <label for="tanggal">Rencana Tanggal Diskusi (Opsional):</label><br>
+                    <input type="date" id="tanggal" name="tanggal">
+                </p>
+                <p>
+                    <label for="urgensi">Tingkat Urgensi (1-10):</label><br>
+                    <input type="range" id="urgensi" name="urgensi" min="1" max="10" value="5">
+                </p>
+                <p>
+                    <label for="warna">Pilih Warna Label Pesan:</label><br>
+                    <input type="color" id="warna" name="warna" value="#0055ff">
+                </p>
+                
+                <p>
+                    <button type="submit">Kirim Pesan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <center>
+            <p>&copy; 2026 Said Muhammad Naufal. Hak Cipta Dilindungi.</p>
+            <p>Tugas Rutin 1 - Pemrograman Web UNIMED</p>
+        </center>
+    </footer>
+
+</body>
+</html>
